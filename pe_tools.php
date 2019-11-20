@@ -74,7 +74,7 @@
 	// Get the command.
 	switch ($cmdgroup)
 	{
-		case "artifacts":  $cmds = array("find" => "Find interesting artifacts", "missing" => "List missing artifacts", "origins" => "Generate an origin Markdown file for each artifact file");  break;
+		case "artifacts":  $cmds = array("find" => "Find interesting artifacts", "missing" => "List missing artifacts", "origins" => "Generate an origin text file for each artifact file");  break;
 		case "extract":  $cmds = array("info" => "Get detailed information about a PE file", "dos-stub" => "Write the MS-DOS stub to a file", "sections" => "Write raw image sections to files", "resources" => "Write resources table items to files (icons, cursors, etc.)", "version-info" => "Get version information from the PE file resources table", "certificates" => "Write raw Authenticode certificates to files");  break;
 		case "calculate":  $cmds = array("rva" => "Get information about a RVA in a PE file", "checksum" => "Calculate the relevant checksum for a file", "hashes" => "Calculate Authenticode-compatible PE hashes for a file");  break;
 		case "modify":  $cmds = array("clear-certs" => "Remove Authenticode certificates", "clear-debug" => "Remove debug directory", "clear-bound-imports" => "Remove rare bound imports", "clear-checksums" => "Clear MS-DOS and NE/PE checksums", "sanitize-dos-stub" => "Apply a sanitized MS-DOS stub", "set-min-os" => "Set the minimum OS version required", "set-min-subsystem" => "Set the minimum OS subsystem version required", "set-app-icon" => "Add or overwrite the application icon resource", "set-manifest" => "Add or overwrite the application manifest resource", "set-version-info" => "Add or overwrite the application version resource", "create-hook-dll" => "Generate a hook DLL", "hook" => "Apply a hook DLL", "unhook" => "Remove a hook DLL", "add-section" => "Adds a new section", "expand-last-section" => "Expand the last section", "delete-section" => "Deletes a section", "apply-checksum" => "Apply MS-DOS/NE/PE checksum");  break;
@@ -412,7 +412,7 @@
 				{
 					file_put_contents($datapath . "/artifacts/" . $name . ".dat", file_get_contents($info["filename"]));
 
-					@unlink($datapath . "/artifacts/" . $name . ".md");
+					@unlink($datapath . "/artifacts/" . $name . ".txt");
 				}
 
 				arsort($info["samples"]);
@@ -532,8 +532,8 @@
 
 			foreach ($manifest["artifacts"] as $name => $info)
 			{
-				// Skip files that sourced from artifacts or already have an associated origin Markdown file.
-				$mdfilename = $datapath . "/artifacts/" . $name . ".md";
+				// Skip files that sourced from artifacts or already have an associated origin text file.
+				$mdfilename = $datapath . "/artifacts/" . $name . ".txt";
 				if (strtolower(substr($info["filename"], -4)) === ".dat" || is_file($mdfilename))  continue;
 
 				if (!$suppressoutput)  echo "Processing '" . $name . "'...\n";

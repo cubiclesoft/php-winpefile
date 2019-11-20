@@ -59,7 +59,7 @@ artifacts:  Manage and find artifacts
 
   find:     Find interesting artifacts
   missing:  List missing artifacts
-  origins:  Generate an origin Markdown file for new artifact files
+  origins:  Generate an origin text file for new artifact files
 
 
 extract:  Extract information and binary data
