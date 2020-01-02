@@ -23,6 +23,15 @@
 			$srcwidth = $info[0];
 			$srcheight = $info[1];
 
+			if ($hotspotx !== false && $hotspoty !== false)
+			{
+				if ($hotspotx < 0)  $hotspotx = 0;
+				if ($hotspotx >= $srcwidth)  $hotspotx = $srcwidth;
+
+				if ($hotspoty < 0)  $hotspoty = 0;
+				if ($hotspoty >= $srcheight)  $hotspoty = $srcheight;
+			}
+
 			// Normalize the image to a maximum of 2048x2048 and constrain to a square image.
 			if ($srcwidth > 2048 || $srcheight > 2048)
 			{
@@ -91,7 +100,7 @@
 				}
 			}
 
-			return self::Generate(($hotspotx === false ? self::TYPE_ICO : self::TYPE_CUR), $icons);
+			return self::Generate(($hotspotx === false || $hotspoty === false ? self::TYPE_ICO : self::TYPE_CUR), $icons);
 		}
 
 		// Resizes an image and convert it to PNG.
