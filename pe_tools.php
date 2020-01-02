@@ -1497,7 +1497,16 @@
 		} while (!$found);
 
 		if ($cmd === "create-hook-dll")  $destfile = false;
-		else  $destfile = CLI::GetUserInputWithArgs($args, "dest", "Destination file", $srcfile, "", $suppressoutput);
+		else
+		{
+			$found = false;
+			do
+			{
+				$destfile = CLI::GetUserInputWithArgs($args, "dest", "Destination file", $srcfile, "", $suppressoutput);
+				if (is_dir($destfile))  CLI::DisplayError("The file '" . $destfile . "' is a directory.", false, false);
+				else  $found = true;
+			} while (!$found);
+		}
 
 		// Load the file.
 		$winpe = new WinPEFile();
