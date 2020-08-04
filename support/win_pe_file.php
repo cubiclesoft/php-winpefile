@@ -1552,7 +1552,7 @@
 			$this->pe_data_dir["resources"]["dir_entries"][$num] = array(
 				"type" => "node",
 				"subtype" => (is_string($idname) ? "name" : "id"),
-				(is_string($idname) ? "name" : "id") => (is_string($type) ? $idname : (int)$idname),
+				(is_string($idname) ? "name" : "id") => (is_string($idname) ? $idname : (int)$idname),
 				"parent" => $parentnum,
 				"pos" => 0,
 				"flags" => 0,
@@ -1615,7 +1615,7 @@
 			$this->pe_data_dir["resources"]["dir_entries"][$num] = array(
 				"type" => "leaf",
 				"subtype" => (is_string($lang) ? "name" : "id"),
-				(is_string($lang) ? "name" : "id") => (is_string($type) ? $lang : (int)$lang),
+				(is_string($lang) ? "name" : "id") => (is_string($lang) ? $lang : (int)$lang),
 				"parent" => $parentnum,
 				"pos" => 0,
 				"rva" => 0,
