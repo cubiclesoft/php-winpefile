@@ -88,7 +88,7 @@
 			0x0284 => "DEC Alpha AXP 64",  // Not sure what the difference between this and 0x0184 is.
 			0x0366 => "MIPS with FPU",
 			0x0466 => "MIPS16 with FPU",
-			0x0520 => "Infineon TriCore",  // Great.  Now your car REALLY does run on Windows and can BSOD with "Your car has crashed due to unknown error 0xDEADBEEF" and then proceed to drive into an actual cow.  This is possibly for Microsoft's attempt at implementating Apple CarPlay but with the Windows OS instead.
+			0x0520 => "Infineon TriCore",  // Great.  Now your car REALLY does run on Windows and can BSOD with "Your car has crashed due to unknown error 0xDEADBEEF" and then proceed to drive into an actual cow.  This is possibly related to Microsoft's attempt at implementating Apple CarPlay but with the Windows OS instead.
 			0x0CEF => "CEF",  // ???
 			0x0EBC => "EFI byte code",  // Intended for a unified device driver architecture.
 			0x5032 => "RISC-V 32-bit",
