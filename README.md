@@ -3,6 +3,10 @@ Windows PE File Tools for PHP
 
 A command-line tool and a set of PHP classes to easily extract information, modify files, and even construct files from scratch in the Windows Portable Executable (PE) file format (i.e. EXEs, DLLs, etc).
 
+[![Binary Files Tutorial:  The PE File Format & More video](https://user-images.githubusercontent.com/1432111/99090576-0e453d80-258c-11eb-967d-8e1b96b6a08c.png)](https://www.youtube.com/watch?v=Chsuicg4d7k "Binary Files Tutorial:  The PE File Format & More")
+
+The above video covers binary file structures and the PE file format binary structures.  The end of the video briefly demonstrates using the command-line tools from this repository.
+
 [![Donate](https://cubiclesoft.com/res/donate-shield.png)](https://cubiclesoft.com/donate/)
 
 Features
