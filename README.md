@@ -7,7 +7,7 @@ A command-line tool and a set of PHP classes to easily extract information, modi
 
 The above video covers binary file structures and the PE file format binary structures.  The end of the video briefly demonstrates using the command-line tools from this repository.
 
-[![Donate](https://cubiclesoft.com/res/donate-shield.png)](https://cubiclesoft.com/donate/)
+[![Donate](https://cubiclesoft.com/res/donate-shield.png)](https://cubiclesoft.com/donate/) [![Discord](https://img.shields.io/discord/777282089980526602?label=chat&logo=discord)](https://cubiclesoft.com/product-support/github/)
 
 Features
 --------
