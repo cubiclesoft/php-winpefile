@@ -1470,7 +1470,7 @@
 	else if ($cmdgroup === "modify")
 	{
 		// Modify.
-		if ($cmd === "clear-certs" || $cmd === "clear-debug" || $cmd === "clear-bound-imports" || $cmd === "clear-checksums")  CLI::ReinitArgs($args, array("src", "dest"));
+		if ($cmd === "clear-certs" || $cmd === "clear-debug" || $cmd === "clear-bound-imports" || $cmd === "update-checksum")  CLI::ReinitArgs($args, array("src", "dest"));
 		else if ($cmd === "set-min-os" || $cmd === "set-min-subsystem")  CLI::ReinitArgs($args, array("src", "dest", "ver"));
 		else if ($cmd === "set-app-icon")  CLI::ReinitArgs($args, array("src", "dest", "ico"));
 		else if ($cmd === "set-manifest")  CLI::ReinitArgs($args, array("src", "dest", "manifest"));
@@ -1543,7 +1543,7 @@
 
 			CLI::DisplayResult($result);
 		}
-		else if ($cmd === "clear-checksums")
+		else if ($cmd === "update-checksum")
 		{
 			$winpe->UpdateChecksum($data, true);
 
