@@ -525,6 +525,7 @@
 				"iat" => array("rva" => 0, "size" => 0),  // Import Address Table.
 				"delay_imports" => array("rva" => 0, "size" => 0),  // Delay-load import tables.
 				"clr_runtime_header" => array("rva" => 0, "size" => 0),  // .NET CLR header.  .cormeta section.
+				"reserved" => array("rva" => 0, "size" => 0),  // IMAGE_DIRECTORY_ENTRY_RESERVED in python pefile
 			);
 
 			return $result;
