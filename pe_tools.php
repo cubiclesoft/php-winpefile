@@ -446,9 +446,9 @@
 				"path" => str_replace("\\", "/", $path),
 				"processed_total" => $totalprocessed,
 				"processed_path" => $numprocessed,
-				"start" => gmdate("Y-m-d H:i:s", $startts) . " GMT",
+				"start" => gmdate("Y-m-d H:i:s", (int)$startts) . " GMT",
 				"start_ts" => $startts,
-				"end" => gmdate("Y-m-d H:i:s", $endts) . " GMT",
+				"end" => gmdate("Y-m-d H:i:s", (int)$endts) . " GMT",
 				"end_ts" => $endts,
 				"time" => $endts - $startts,
 			);
