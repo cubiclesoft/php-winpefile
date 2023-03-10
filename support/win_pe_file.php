@@ -1829,6 +1829,7 @@
 				{
 					$x = 0;
 					$y = ($this->dos_header["bytes_last_page"] ? ($this->dos_header["pages"] - 1) * 512 + $this->dos_header["bytes_last_page"] : $this->dos_header["pages"] * 512);
+					if ($y > strlen($data))  $y = strlen($data);
 					$val = 0;
 					while ($x < $y)
 					{
